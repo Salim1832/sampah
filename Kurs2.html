@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fls {
+            background-color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <fieldset class="fls">
+            <legend>Kurs Mata Uang</legend>
+            <table border="2" style="width: 100px;">
+                <tr>
+                    <td>
+                        <input type="number" class="input" name="" placeholder="Masukan Jumlah">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="kurs" id="values" >
+                        <option value="USD">Dollar US - 9915</option>
+                        <option value="SGD">Dollar Singapore - 13472</option>
+                        <option value="MYR">Ringgit Malaysia - 874</option>
+                        <option value="JPY">Yen Jepang - 120</option>
+                        <option value="EUR">Euro - 15888</option>
+                        <option value="SAR">Riyal Arab Saudi - 3592 </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="hitung">Hitung</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><p class="jumlah">Jumlah</p>  </td>
+                </tr>
+            </table>
+             
+        </fieldset>
+        
+    </div>
+
+    <script>
+        const input = document.querySelector(".input")
+        const kurs = document.querySelector(".kurs")
+        const btnhitung = document.querySelector(".hitung")
+        const jumlah = document.querySelector(".jumlah")
+        btnhitung.addEventListener("click", function() {
+            if (kurs.value == "USD") {
+                input.value*9915;
+                jumlah.innerHTML ="Jumlah :" + parseInt(input.value)*9915;
+            }
+            else if (kurs.value == "SGD") {
+                input.value*13472;
+                jumlah.innerHTML ="Jumlah :" + parseInt(input.value)*13472;
+            }
+            else if (kurs.value == "MYR") {
+                input.value*874;
+                jumlah.innerHTML ="Jumlah :" + parseInt(input.value)*874;
+            }
+            else if (kurs.value == "JPY") {
+                input.value*120;
+                jumlah.innerHTML ="Jumlah :" + parseInt(input.value)*120;
+            }
+            else if (kurs.value == "EUR") {
+                input.value*15888;
+                jumlah.innerHTML ="Jumlah :" + parseInt(input.value)*15888;
+            }
+            else if (kurs.value == "SAR") {
+                input.value*3592;
+                jumlah.innerHTML ="Jumlah :" + parseInt(input.value)*3592;
+            }
+
+        })
+    </script>
+    
+</body>
+</html>

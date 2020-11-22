@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbox</title>
+</head>
+<body>
+    <fieldset>
+        <table>
+            <p class="result">Hai</p>
+            <td>
+                <input type="text" class="input">
+                <button class="btn" onclick="krm()">Kirim</button>
+            </td>
+        </table>
+    </fieldset>
+
+    <script>
+        var result = document.querySelector(".result");
+        var tombol = document.querySelector(".btn");
+        var input = document.querySelector(".input");
+
+        function krm() {
+            result.innerHTML = result.innerHTML + "<br>" + input.value ;
+        }
+
+    </script>
+</body>
+</html>
